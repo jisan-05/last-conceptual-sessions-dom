@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main>
+        <div class="bg-gray-100 w-[420px] mx-auto mt-16 pb-8 rounded">
+            <h3
+                class="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent text-2xl font-bold pt-4 px-4">
+                Programmer Expenses Assistant</h3>
+            <div class="flex justify-around mt-5">
+                <button class="btn btn-info text-lg w-[45%]">Assistant</button>
+                <button class="btn btn-success text-white text-lg w-[45%]">History</button>
+            </div>
+            <!-- Form Start  -->
+            <div class="mx-auto mt-5 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text font-bold">Income</span>
+                        </label>
+                        <input type="number" id="income" placeholder="Enter Income" class="input input-bordered"
+                            required />
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="form-control w-[48%]">
+                            <label class="label">
+                                <span class="label-text">Software</span>
+                            </label>
+                            <input id="software" type="number" placeholder="Software Cost" class="input input-bordered"
+                                required />
+                        </div>
+                        <div class="form-control w-[48%]">
+                            <label class="label">
+                                <span class="label-text">Courses</span>
+                            </label>
+                            <input id="courses" type="number" placeholder="Courses cost" class="input input-bordered"
+                                required />
+                        </div>
+                    </div>
+
+                    <label class="label">
+                        <span class="label-text font-bold">Internet</span>
+                    </label>
+                    <input id="internet" type="number" placeholder="Internet Cost" class="input input-bordered"
+                        required />
+            </div>
+            <!-- Calculate Button  -->
+
+            <div class="form-control mt-6">
+                <button id="calculate-button" class="btn btn-primary w-[88%] mx-auto">Calculate</button>
+            </div>
+            </form>
+
+            <div class="w-full text-center space-y-3">
+                <label class="label px-8 mt-4">
+                    <span class="label-text font-bold">Savings (%)</span>
+                </label>
+                <input type="number" placeholder="Savings %" class="input input-bordered w-[88%] " required />
+                <button class="btn btn-success w-[88%]">Savings calculate</button>
+            </div>
+
+            <!-- Result Summary ------------>
+            <div id="result-div" class="hidden">
+                <h3 class="text-2xl font-bold text-purple-600 text-center mt-4">Result Summary</h3>
+            <div class=" flex justify-around" >
+                <div>
+                    <p>Total Expenses</p>
+                    <p>$<span id="totalExpenses">00</span></p>
+                </div>
+                <div>
+                    <p>New Balance</p>
+                    <p>$<span id="newBalance">00</span></p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+    <script src="./js/script.js"></script>
+
+</html>
