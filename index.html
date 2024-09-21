@@ -63,23 +63,34 @@
                 <label class="label px-8 mt-4">
                     <span class="label-text font-bold">Savings (%)</span>
                 </label>
-                <input type="number" placeholder="Savings %" class="input input-bordered w-[88%] " required />
-                <button class="btn btn-success w-[88%]">Savings calculate</button>
+                <input id="saving-input" type="number" placeholder="Savings %" class="input input-bordered w-[88%] "
+                    required />
+                <button class="btn btn-success w-[88%] text-white text-lg" id="saving-btn">Savings calculate</button>
             </div>
 
             <!-- Result Summary ------------>
-            <div id="result-div" class="hidden">
+            <div id="result-div" class="hidden space-y-3">
                 <h3 class="text-2xl font-bold text-purple-600 text-center mt-4">Result Summary</h3>
-            <div class=" flex justify-around" >
-                <div>
-                    <p>Total Expenses</p>
-                    <p>$<span id="totalExpenses">00</span></p>
+                <div class=" flex justify-around">
+                    <div>
+                        <p class="font-bold text-lg">Total Expenses</p>
+                        <p>$<span id="totalExpenses">00</span></p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg">New Balance</p>
+                        <p>$<span id="newBalance">00</span></p>
+                    </div>
                 </div>
-                <div>
-                    <p>New Balance</p>
-                    <p>$<span id="newBalance">00</span></p>
+                <div class="flex justify-around">
+                    <div>
+                        <p class="font-bold text-lg">Saving amount</p>
+                        <p>$<span id="savingAmount">00</span></p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg">Remaining Balance</p>
+                        <p>$<span id="remainingBalance">00</span></p>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
         </div>
